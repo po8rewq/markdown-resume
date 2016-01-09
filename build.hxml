@@ -1,0 +1,10 @@
+-cp src
+-main Main
+
+-lib markdown
+
+-neko build/markdown-resume.n
+
+--next
+
+-cmd neko build/markdown-resume.n html examples/myresume.md templates/modern examples
