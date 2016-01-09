@@ -6,6 +6,7 @@ class Main
   {
     var args = Sys.args();
 
+    // HELP
     if(args[0] == "help")
     {
       neko.Lib.println("Markdown Resume");

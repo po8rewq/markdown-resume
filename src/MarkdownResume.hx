@@ -8,16 +8,16 @@ import haxe.Template;
 
 class MarkdownResume
 {
-  // Type d'export
+  // Output format
   var _type : OutputType;
 
-  // chemin du fichier md
+  // Resume file path
   var _md_file : String;
 
-  // chemin du dossier de template
+  // Template directory
   var _template : String;
 
-  // chemin de sortie
+  // Output directory
   var _outputDir : String;
 
   public function new(pType:String, pMdFile: String, pTemplate: String, pOutputDir: String)
@@ -42,6 +42,9 @@ class MarkdownResume
     }
   }
 
+  /**
+   * HTML export
+   */
   function generateHtmlFile()
   {
     var resume = File.getContent(_md_file);
@@ -66,10 +69,12 @@ class MarkdownResume
     outFile.close();
   }
 
+  /**
+   * PDF
+   */
   function generatePdfFile()
   {
     // http://wkhtmltopdf.org/
-    // "C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe" examples\resume.html examples\resume.pdf
   }
 
 }
